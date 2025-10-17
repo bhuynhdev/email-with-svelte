@@ -1,7 +1,11 @@
 <script lang="ts">
+	import { styleToString } from '$lib/utils.js';
+	import type { StandardProperties } from 'csstype';
 	import type { HTMLTableAttributes } from 'svelte/elements';
 
-	type RowProps = HTMLTableAttributes;
+	type RowProps = Omit<HTMLTableAttributes, 'style' | 'class'> & {
+		style: StandardProperties;
+	};
 
 	let { children, style, ...props }: RowProps = $props();
 </script>
@@ -14,7 +18,7 @@
 	cellspacing="0"
 	role="presentation"
 	{...props}
-	{style}
+	style={styleToString(style)}
 >
 	<tbody style="width: 100%">
 		<tr style="width: 100%">
