@@ -1,15 +1,25 @@
 <script lang="ts">
-	import { styleToString } from '$lib/utils.js';
+	import { styleToString } from '$lib/utils/style-to-string.js';
+	import { computeMargins } from '$lib/utils/compute-margins.js';
 	import type { StandardProperties } from 'csstype';
 	import type { SvelteHTMLElements } from 'svelte/elements';
 
 	type TextProps = Omit<SvelteHTMLElements['p'], 'style' | 'class'> & {
-		style: StandardProperties;
+		style?: StandardProperties;
 	};
 
 	let { children, style, ...props }: TextProps = $props();
+	const marginStyle = computeMargins(style || {}, { marginTop: '16px', marginBottom: '16px' });
 </script>
 
-<p {...props} style={styleToString({ fontSize: '14px', lineHeight: '24px', ...style })}>
+<p
+	style={styleToString({
+		fontSize: '14px',
+		lineHeight: '24px',
+		...style,
+    ...marginStyle
+	})}
+	{...props}
+>
 	{@render children?.()}
 </p>

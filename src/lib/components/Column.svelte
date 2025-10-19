@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { styleToString } from '$lib/utils.js';
+	import { styleToString } from '$lib/utils/style-to-string.js';
 	import type { StandardProperties } from 'csstype';
 	import type { HTMLTdAttributes } from 'svelte/elements';
 

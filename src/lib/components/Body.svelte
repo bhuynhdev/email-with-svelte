@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { SvelteHTMLElements } from 'svelte/elements';
 	import type { StandardProperties } from 'csstype';
-	import { styleToString } from '$lib/utils.js';
+	import { styleToString } from '$lib/utils/style-to-string.js';
 
 	type BodyProps = Omit<SvelteHTMLElements['body'], 'style' | 'class'> & {
 		style: StandardProperties;
