@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { styleToString } from '$lib/utils/style-to-string.js';
-	import { computeMargins } from '$lib/utils/compute-margins.js';
+	import { parseMargins } from '$lib/utils/margins.js';
 	import type { StandardProperties } from 'csstype';
 	import type { SvelteHTMLElements } from 'svelte/elements';
 
@@ -9,7 +9,7 @@
 	};
 
 	let { children, style, ...props }: TextProps = $props();
-	const marginStyle = computeMargins(style || {}, { marginTop: '16px', marginBottom: '16px' });
+	const marginStyle = parseMargins(style || {}, { marginTop: '16px', marginBottom: '16px' });
 </script>
 
 <p
