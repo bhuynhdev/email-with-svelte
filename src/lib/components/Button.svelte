@@ -56,7 +56,7 @@
 		maxWidth: '100%',
 		msoPaddingAlt: '0px',
 		...style,
-    ...paddingsInString
+		...paddingsInString
 	})}
 	{target}
 >

@@ -17,7 +17,7 @@
 		fontSize: '14px',
 		lineHeight: '24px',
 		...style,
-    ...marginStyle
+		...marginStyle
 	})}
 	{...props}
 >

@@ -1,6 +1,10 @@
 {
 	"name": "@bhuynhdev/email-with-svelte",
-	"version": "0.0.1",
+	"version": "0.1.0",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/bhuynhdev/email-with-svelte.git"
+	},
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build && npm run prepack",
