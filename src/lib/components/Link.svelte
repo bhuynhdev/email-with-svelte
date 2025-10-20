@@ -7,7 +7,7 @@
 		style?: StandardProperties;
 	};
 
-	let { children, target = '_blank', style, ...props }: LinkProps = $props();
+	let { children, target = '_blank', style = {}, ...props }: LinkProps = $props();
 </script>
 
 <a

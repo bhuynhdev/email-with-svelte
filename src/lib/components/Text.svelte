@@ -8,8 +8,8 @@
 		style?: StandardProperties;
 	};
 
-	let { children, style, ...props }: TextProps = $props();
-	const marginStyle = parseMargins(style || {}, { marginTop: '16px', marginBottom: '16px' });
+	let { children, style = {}, ...props }: TextProps = $props();
+	const marginStyle = parseMargins(style, { marginTop: '16px', marginBottom: '16px' });
 </script>
 
 <p

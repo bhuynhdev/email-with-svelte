@@ -4,10 +4,10 @@
 	import type { HTMLTableAttributes } from 'svelte/elements';
 
 	type RowProps = Omit<HTMLTableAttributes, 'style' | 'class'> & {
-		style: StandardProperties;
+		style?: StandardProperties;
 	};
 
-	let { children, style, ...props }: RowProps = $props();
+	let { children, style = {}, ...props }: RowProps = $props();
 </script>
 
 <table

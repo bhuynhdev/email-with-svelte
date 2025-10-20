@@ -4,7 +4,7 @@
 	import type { HTMLTableAttributes } from 'svelte/elements';
 
 	type ContainerProps = Omit<HTMLTableAttributes, 'style' | 'class'> & {
-		style: StandardProperties;
+		style?: StandardProperties;
 	};
 
 	let { children, style, ...props }: ContainerProps = $props();

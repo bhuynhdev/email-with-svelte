@@ -4,10 +4,10 @@
 	import type { HTMLTdAttributes } from 'svelte/elements';
 
 	type ColumnProps = Omit<HTMLTdAttributes, 'style' | 'class'> & {
-		style: StandardProperties;
+		style?: StandardProperties;
 	};
 
-	let { children, style, ...props }: ColumnProps = $props();
+	let { children, style = {}, ...props }: ColumnProps = $props();
 </script>
 
 <td {...props} data-id="__ems-column" style={styleToString(style)}>
