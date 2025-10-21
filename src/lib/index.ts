@@ -14,6 +14,10 @@ import Row from './components/Row.svelte';
 import Section from './components/Section.svelte';
 import Text from './components/Text.svelte';
 
+import { render } from './render.js';
+
+import { styleToString } from './utils/style-to-string.js';
+
 export {
 	Body,
 	Button,
@@ -29,5 +33,7 @@ export {
 	Preview,
 	Row,
 	Section,
-	Text
+	Text,
+	render,
+	styleToString
 };
